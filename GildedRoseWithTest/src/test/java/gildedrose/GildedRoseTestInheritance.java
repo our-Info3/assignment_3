@@ -19,9 +19,7 @@ public class GildedRoseTestInheritance extends
 
 	@Override
 	public ItemWithBehaviour createItem(String name, int sellIn, int quality) {
-		if (name.contains("Aged Brie"))
-			return new AgedBrie(name,sellIn,quality);
-		return new ItemWithBehaviour(name,sellIn,quality);
+		return GildedRose.createItem(name,sellIn,quality);
 	}
 
 	@Override
