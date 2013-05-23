@@ -175,6 +175,7 @@ public abstract class GildedRoseTest {
 	 * hook methods to be overwritten by subclasses
 	 */
 	public Item createItem(String name, int sellIn, int quality) {
+		quality = checkQuality(quality);
 		return new Item(name, sellIn, quality);
 	}
 
@@ -195,6 +196,14 @@ public abstract class GildedRoseTest {
 		assertEquals(message + " (SellIn)", expectedSellIn, item.getSellIn());
 		// the main assertion
 		assertEquals(message + " (Quality)", expectedQuality, item.getQuality());
+	}
+	
+	public int checkQuality(int quality){
+		if (quality > 50){
+			return 50;
+		}else{
+			return quality;
+		}
 	}
 
 }
