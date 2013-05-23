@@ -1,5 +1,5 @@
 package gildedrose.inheritance;
-//test
+
 public class AgedBrie extends ItemWithBehaviour {
 	public AgedBrie(String name, int sellIn, int quality) {
 		super(name, sellIn, quality);
@@ -9,5 +9,13 @@ public class AgedBrie extends ItemWithBehaviour {
 		sellIn--;
 		
 		quality++;
+		
+
+		if(sellIn<=0){
+			quality++;
+		}
+		if(quality>50){
+			quality=50;
+		}
 	}
 }
