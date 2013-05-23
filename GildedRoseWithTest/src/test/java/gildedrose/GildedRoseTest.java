@@ -27,7 +27,7 @@ import org.junit.runners.Parameterized.Parameters;
  */
 @RunWith(Parameterized.class)
 public abstract class GildedRoseTest {
-	public static final boolean INCLUDE_CONJURED_TEST_CASES = false;
+	public static final boolean INCLUDE_CONJURED_TEST_CASES = true;
 
 	@Parameters
 	public static Collection<Object[]> data() {

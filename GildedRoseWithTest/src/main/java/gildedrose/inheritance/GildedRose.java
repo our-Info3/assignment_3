@@ -49,6 +49,9 @@ public class GildedRose {
 		if (name.contains("Backstage passes")){
 			return new Backstage_passes(name,sellIn,quality);
 		}
+		if (name.contains("Conjured")){
+			return new Conjured(name,sellIn,quality);
+		}
 		return new ItemWithBehaviour(name,sellIn,quality);
 
 	}
