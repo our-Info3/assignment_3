@@ -2,12 +2,8 @@ package gildedrose.strategy;
 
 import gildedrose.original.Item;
 
-public class UpdateStrategy implements UpdateStrategyInterface {
-    /**
-     * update strategy for regular items, incomplete implementation.
-     * this method has to be overwritten by subclasses/other strategies.
-     * @param item
-     */
+public class UpdateStrategyForAgedBrie implements UpdateStrategyInterface {
+	
 	public void update(Item item) {
 		int quality = item.getQuality();
 		int sellIn = item.getSellIn();
@@ -17,10 +13,10 @@ public class UpdateStrategy implements UpdateStrategyInterface {
 		item.setSellIn(sellIn);	
 	}
 	public int calculateNewQuality(int quality, int sellIn) {
-		if (sellIn < 0){
-			return checkQuality(quality-2);
-		}else{
-			return checkQuality(quality-1);
+		if (sellIn <= 0){
+				return checkQuality(quality+2);
+		}else {
+			return checkQuality(quality+1);
 		}
 	}
 	

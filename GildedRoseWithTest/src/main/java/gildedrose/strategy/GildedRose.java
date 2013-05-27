@@ -40,9 +40,18 @@ public class GildedRose {
 		}
 	}
 
-	public static UpdateStrategy getUpdateStrategyForItem(Item item) {
-		// TODO this has to return a matching strategy somehow.
-		return new UpdateStrategy();
+	public static UpdateStrategyInterface getUpdateStrategyForItem(Item item) {
+		if (item.name.equals("Conjured mana cake")){
+			return new UpdateStrategyForConjuredItems();
+		}else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")){
+			return new UpdateStrategyForBackstagePass();
+		}else if (item.name.equals("Sulfuras, Hand of Ragnaros")){
+			return new UpdateStrategyForSulfura();
+		}else if (item.name.equals("Aged Brie")){
+			return new UpdateStrategyForAgedBrie();
+		}else{
+			return new UpdateStrategy();
+		}
 	}
 
 }
