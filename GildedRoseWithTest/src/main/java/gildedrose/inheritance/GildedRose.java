@@ -42,6 +42,19 @@ public class GildedRose {
 			int quality) {
 		if (name.contains("Aged Brie"))
 			return new AgedBrie(name,sellIn,quality);
+<<<<<<< HEAD
+=======
+		}
+		if (name.contains("Sulfuras")){
+			return new Sulfuras(name,sellIn,quality);
+		}
+		if (name.contains("Backstage passes")){
+			return new Backstage_passes(name,sellIn,quality);
+		}
+		if (name.contains("Conjured")){
+			return new Conjured(name,sellIn,quality);
+		}
+>>>>>>> 2e7142b5f98a8ac26b4344d48400192ed1bebbb5
 		return new ItemWithBehaviour(name,sellIn,quality);
 
 	}
